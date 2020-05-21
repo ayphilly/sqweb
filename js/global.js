@@ -1,4 +1,5 @@
 // Global Javascript Initialization
+
 var Global = function() {
   'use strict';
 
@@ -25,22 +26,26 @@ var Global = function() {
     $('.popovers-destroy').popover('destroy');
   }
 
-  // Scroll To Section
-  var handleScrollToSection = function() {
-    $(function() {
-      $('a[href*=#js__scroll-to-]:not([href=#js__scroll-to-])').on('click', function() {
-        if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
-          var target = $(this.hash);
-          target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-          if (target.length) {
-            $('html,body').animate({
-              scrollTop: target.offset().top - 90
-            }, 1000);
-            return false;
-          }
+   // Scroll To Section
+   var handleScrollToSection = function() {
+      $("a").on('click', function(event) {
+
+        
+        if (this.hash !== "") {
+          
+          event.preventDefault();    
+          // Store hash
+          var hash = this.hash;
+    
+          
+          $('html, body').animate({
+            scrollTop: $(hash).offset().top
+          }, 800, function(){
+      
+            window.location.hash = hash;
+          });
         }
-      });
-    });
+      });   
   }
 
   // Handle Promo Section
@@ -115,6 +120,25 @@ var Global = function() {
    });       
   }
 
+  var Hide = function () {
+    $('#mySelect').on('click', function(){
+
+        var ele = document.getElementById("mySelect").selectedIndex;
+        console.log(ele);
+        if (ele === 1) {
+          var element = document.getElementById("hide");
+          element.style.display="block";
+          //element.classList.toggle("activate");
+        }else {
+          var element = document.getElementById("hide");
+          element.style.display="none";
+
+        }
+
+    })
+    
+  }
+
   return {
     init: function() {
       handleBootstrapComponents(); // initial setup for Bootstrap Components
@@ -122,7 +146,8 @@ var Global = function() {
       handlePromoSection(); // initial setup for Promo Section
       handleOverlay(); // initial setup for Overlay
       handleVerticalCenterAligned(); // initial setup for Vertical Center Aligned
-      handleEqualHeight(); // initial setup for Equal Height
+      handleEqualHeight();
+      Hide(); // initial setup for Equal Height
     }
   }
 }();

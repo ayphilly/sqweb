@@ -32,6 +32,42 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: .5rem;
 }
 
+.activate {
+  display:block
+}
+
+#hide{
+  display:none
+}
+.lbl {
+  color: white;
+}
+option {
+  color: #242424;
+
+}
+select {
+  width: 100%;
+  height: 50px;
+  font-size: 100%;
+  font-weight: 300;
+  cursor: pointer;
+  border-radius: 0;
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid #fff;
+  color: white;
+  padding: 10px;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  padding: 10px;
+}
+/* For IE <= 11 */
+select::-ms-expand {
+  display: none; 
+}
+
 h1,
 h2,
 h3,
@@ -157,13 +193,13 @@ a:focus {
 ------------------------------------*/
 ::selection {
   color: #fff;
-  background: #13b1cd;
+  background: blue;
   text-shadow: none;
 }
 
 ::-webkit-selection {
   color: #fff;
-  background: #13b1cd;
+  background: blue;
   text-shadow: none;
 }
 
@@ -2056,7 +2092,7 @@ fieldset[disabled] .s-btn {
   width: 1.875rem;
   height: 3rem;
   z-index: 9;
-  background: #13b1cd;
+  background: blue;
   border-radius: 3.125rem;
   text-align: center;
   transition-duration: 300ms;
@@ -2119,7 +2155,7 @@ fieldset[disabled] .s-btn {
 }
 
 .s-portfolio__filter-v1-item.cbp-filter-item-active {
-  color: #13b1cd !important;
+  color: blue !important;
 }
 
 .s-portfolio__filter-v1.cbp-l-filters-text {
