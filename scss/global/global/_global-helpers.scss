@@ -3,6 +3,7 @@
 ------------------------------------*/
 
 .g-fullheight--xs { height: 100vh; }
+.g-fullheight--xss { height: 30vh; }
 
 /* Small screen / phone */
 @include media-breakpoint-up(sm) {

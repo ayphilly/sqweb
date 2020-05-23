@@ -885,6 +885,10 @@
   height: 100vh;
 }
 
+.g-fullheight--xss {
+  height: 30vh;
+}
+
 /* Small screen / phone */
 @media (min-width: 34em) {
   .g-fullheight--sm {
@@ -1053,6 +1057,13 @@
   }
 }
 
+#owl-demo .item{
+  margin: 10px;
+}
+
+.pad-me{
+  padding:20px;
+}
 /*----------------------------------
   Horizontal Center Align
 ------------------------------------*/
