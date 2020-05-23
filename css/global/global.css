@@ -1064,6 +1064,17 @@
 .pad-me{
   padding:20px;
 }
+
+.width-me {
+  width: 60vh
+}
+@media (max-width: 1300px) {
+  .width-me {
+    width: 40vh
+  }
+}
+
+
 /*----------------------------------
   Horizontal Center Align
 ------------------------------------*/

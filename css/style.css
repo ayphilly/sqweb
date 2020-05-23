@@ -31,6 +31,15 @@ body {
   padding:20px;
 }
 
+.width-me {
+  width: 60vh
+}
+@media (min-width: 1300px) {
+  .width-me {
+    width: 40vh
+  }
+}
+
 /* Typography */
 h1, h2, h3, h4, h5, h6 {
   font-weight: 400;
